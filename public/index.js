@@ -14,7 +14,11 @@ function getImagepreview(event){
   console.log("this is the element");
   console.log(deleteAlert);
     deleteAlert.remove();
-  
+}
+
+function delete_box(){
+  let data =  confirm('are you sure you want to Delete this');
+  console.log(data);
 }
 
 

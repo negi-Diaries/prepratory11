@@ -57,15 +57,23 @@
         <div class="container flexable">
         <form class="d-flex" role="search" method="POST" action="edit">
                    <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
-                    <!-- <input type="submit" class="btn btn-primary" value="Edit" name='submit'>         -->
                     <button type="submit" class="btn btn-primary" name='submit'>Edit</button> 
                 </form>
                 <form class="d-flex" role="search" method="GET">
-                    <!-- <a type="button" class="btn btn-danger mx-2" href="delete?id=<?php echo $data['id'] ?>">Delete</a> -->
-                    <a type="button" class="btn btn-danger mx-2" href="delete?id=<?php echo $data['id'] ?>">Delete</a>
+                    <!-- <a type="button" class="btn btn-danger mx-2" href="delete?id=<?php// echo $data['id'] ?>">Delete</a> -->
+                    <button type="button" class="btn btn-danger mx-2" onclick="delete_box(<?php echo $data['id']; ?>)">Delete</button>
                 </form>
         </div>
-
+<script>
+    function delete_box(id){
+  let confirmDelete =  confirm('are you sure you want to Delete this');
+  console.log(confirmDelete);
+  console.log(id);
+  if(confirmDelete){
+            window.location.href='delete?id='+id;
+        }
+}
+</script>
     <script src="public/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">

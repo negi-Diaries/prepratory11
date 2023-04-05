@@ -31,7 +31,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <a type="button" class="btn btn-primary" href="home">Back</a>
+                    <!-- <a type="button" class="btn btn-primary" href="home">Back</a> -->
                 </form>
             </div>
         </div>
